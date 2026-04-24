@@ -1,25 +1,36 @@
-# SQL for ML — Cheat Sheet
+# SQL for Machine Learning
 
-This repository contains my SQL practice for AI and machine learning roles.
+This repository demonstrates how SQL is used to transform raw relational data into machine learning-ready datasets.
 
-## Joins
-### INNER JOIN
-Used when we only want matching rows from both tables.
+## Key Concepts Covered
 
-### LEFT JOIN
-Used when we want to keep all rows from the left table even if there is no match.
+### Joins
+- **INNER JOIN**: Keeps only matching rows from both tables
+- **LEFT JOIN**: Preserves all entities from the main table, even if no related records exist
 
-## Window Functions
-Window functions allow calculations across related rows without collapsing results.
+### Aggregations
+- GROUP BY with COUNT, SUM, and AVG to create customer-level features
+- COALESCE to handle NULL values and produce numeric features for modeling
 
-### ROW_NUMBER
-Used to rank rows within a group.
+### Feature Engineering
+- Creating features such as:
+  - order_count
+  - avg_order_value
+  - total_spent
 
-### LAG
-Used to compare a row with the previous row.
+### Target Creation
+- Using CASE WHEN to define churn as a binary variable
 
-## Why this matters
-SQL is essential for:
-- data extraction
-- feature engineering
-- model evaluation
+### Window Functions
+- **ROW_NUMBER**: Ranking rows within each group
+- **LAG**: Comparing values across time for behavioral analysis
+
+## Why This Matters
+
+In real-world machine learning systems, SQL is used to:
+- prepare clean and structured datasets
+- preserve all entities to avoid bias
+- create meaningful features from raw data
+- define target variables for supervised learning
+
+This project reflects my transition into applied AI and data science, focusing on building explainable and production-relevant data workflows.
